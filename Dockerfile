@@ -8,7 +8,10 @@ COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
 COPY apps/storefront/package.json ./apps/storefront/
 COPY packages/types/package.json ./packages/types/
 COPY packages/ui/package.json ./packages/ui/
+COPY packages/utils/package.json ./packages/utils/
 COPY packages/api-client/package.json ./packages/api-client/
+COPY packages/auth/package.json ./packages/auth/
+COPY packages/i18n/package.json ./packages/i18n/
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
@@ -20,7 +23,10 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY --from=deps /app/apps/storefront/node_modules ./apps/storefront/node_modules
 COPY --from=deps /app/packages/types/node_modules ./packages/types/node_modules
 COPY --from=deps /app/packages/ui/node_modules ./packages/ui/node_modules
+COPY --from=deps /app/packages/utils/node_modules ./packages/utils/node_modules
 COPY --from=deps /app/packages/api-client/node_modules ./packages/api-client/node_modules
+COPY --from=deps /app/packages/auth/node_modules ./packages/auth/node_modules
+COPY --from=deps /app/packages/i18n/node_modules ./packages/i18n/node_modules
 COPY . .
 RUN pnpm --filter storefront build
 
