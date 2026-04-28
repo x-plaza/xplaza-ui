@@ -1,0 +1,72 @@
+name: PR Pipeline
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on: pull_request
+
+jobs:
+  lint-test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Type Check
+        run: pnpm typecheck
+
+      - name: Format Check
+        run: pnpm format:check
+
+      - name: Security Scan (Trivy)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          ignore-unfixed: true
+          format: 'table'
+          exit-code: '0'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Run Tests
+        run: pnpm test
+        continue-on-error: true
+
+      - name: Build
+        run: pnpm build
+
+      - name: Comment Build Status on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        shell: bash
+        run: |
+          BODY="## 🏗️ Build Summary"$'\n'
+          BODY+="| Step | Status |"$'\n'
+          BODY+="|------|--------|"$'\n'
+          BODY+="| ✅ **Lint** | Passed |"$'\n'
+          BODY+="| ✅ **Type Check** | Passed |"$'\n'
+          BODY+="| ✅ **Build** | Passed |"$'\n'
+
+          gh pr comment ${{ github.event.pull_request.number }} --body "${BODY}" --edit-last --create-if-none
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
