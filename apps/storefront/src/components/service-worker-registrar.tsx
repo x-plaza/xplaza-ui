@@ -1,0 +1,19 @@
+'use client';
+
+import { useEffect } from 'react';
+
+export function ServiceWorkerRegistrar() {
+  useEffect(() => {
+    if (
+      typeof window !== 'undefined' &&
+      'serviceWorker' in navigator &&
+      process.env.NODE_ENV === 'production'
+    ) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {
+        // SW registration failed — non-critical
+      });
+    }
+  }, []);
+
+  return null;
+}
