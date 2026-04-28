@@ -19,7 +19,7 @@
     "@xplaza/ui": "workspace:*",
     "@xplaza/utils": "workspace:*",
     "lucide-react": "^0.503.0",
-    "next": "^15.3.2",
+    "next": "^16.2.4",
     "next-intl": "^4.9.2",
     "nuqs": "^2.4.0",
     "react": "^19.1.0",
