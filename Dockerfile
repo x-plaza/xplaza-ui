@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.7
 
 # ---- Stage 1: Install dependencies ----
-FROM node:22-alpine AS deps
+FROM node:25-alpine AS deps
 RUN corepack enable && corepack prepare pnpm@10 --activate
 WORKDIR /app
 COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
@@ -16,7 +16,7 @@ RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
 # ---- Stage 2: Build ----
-FROM node:22-alpine AS build
+FROM node:25-alpine AS build
 RUN corepack enable && corepack prepare pnpm@10 --activate
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
@@ -31,7 +31,7 @@ COPY . .
 RUN pnpm --filter storefront build
 
 # ---- Stage 3: Runtime ----
-FROM node:22-alpine AS runner
+FROM node:25-alpine AS runner
 LABEL org.opencontainers.image.source="https://github.com/x-plaza/xplaza-ui"
 LABEL org.opencontainers.image.description="X-Plaza e-commerce storefront"
 LABEL org.opencontainers.image.licenses="Proprietary"
