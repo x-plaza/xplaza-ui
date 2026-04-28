@@ -5,7 +5,7 @@ import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { Button } from '@xplaza/ui';
 import { Input } from '@xplaza/ui';
 import { Skeleton } from '@xplaza/ui';
-import { Plus, Trash2, Pencil, MapPin, Check } from 'lucide-react';
+import { Plus, Trash2, MapPin } from 'lucide-react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import {
   getAddresses,

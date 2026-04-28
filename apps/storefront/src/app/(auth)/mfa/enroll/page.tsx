@@ -7,7 +7,6 @@ import { Input } from '@xplaza/ui';
 import { ShieldCheck } from 'lucide-react';
 
 export default function MfaEnrollPage() {
-  const [step, setStep] = useState<'setup' | 'verify'>('setup');
   const [code, setCode] = useState('');
   const [loading, setLoading] = useState(false);
 

@@ -20,7 +20,7 @@ const CHECKOUT_STEPS = [
 export default function CheckoutReviewPage() {
   const router = useRouter();
   const { cart } = useCart();
-  const { checkout, complete, isCompleting } = useCheckout();
+  const { complete, isCompleting } = useCheckout();
   const [error, setError] = useState('');
 
   async function handlePlaceOrder() {

@@ -1,7 +1,6 @@
 'use client';
 
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import { Button } from '@xplaza/ui';
 import { Input } from '@xplaza/ui';
 import { Badge } from '@xplaza/ui';
 import { X } from 'lucide-react';

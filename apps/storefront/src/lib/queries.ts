@@ -185,7 +185,7 @@ export async function searchProducts(params: {
     },
   });
   if (response.data?.hits) {
-    response.data.hits = response.data.hits.map((h: any) => mapProduct(h));
+    response.data.hits = response.data.hits.map((h: Product) => mapProduct(h));
   }
   return response;
 }

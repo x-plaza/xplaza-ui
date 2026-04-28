@@ -2,7 +2,8 @@
 
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { Button } from '@xplaza/ui';
-import { Repeat, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
+import { Repeat } from 'lucide-react';
 
 export default function SubscriptionsPage() {
   return (
@@ -22,7 +23,7 @@ export default function SubscriptionsPage() {
           Subscribe to products for automatic recurring delivery.
         </p>
         <Button variant='outline' className='mt-4' asChild>
-          <a href='/products'>Browse Products</a>
+          <Link href='/products'>Browse Products</Link>
         </Button>
       </div>
     </div>

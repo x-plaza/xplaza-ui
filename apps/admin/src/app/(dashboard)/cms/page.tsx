@@ -2,7 +2,7 @@
 
 import { Card } from '@xplaza/ui';
 import { Button } from '@xplaza/ui';
-import { FileText, Plus, Image, HelpCircle } from 'lucide-react';
+import { FileText, Plus } from 'lucide-react';
 
 export default function AdminCmsPage() {
   return (

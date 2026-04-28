@@ -1,7 +1,6 @@
 'use client';
 
 import { Card } from '@xplaza/ui';
-import { Badge } from '@xplaza/ui';
 import { Button } from '@xplaza/ui';
 import { ShoppingCart } from 'lucide-react';
 

@@ -2,7 +2,7 @@
 
 import { Card } from '@xplaza/ui';
 import { Button } from '@xplaza/ui';
-import { Search as SearchIcon, RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AdminSearchPage() {

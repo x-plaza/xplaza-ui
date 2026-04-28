@@ -23,6 +23,6 @@ export function captureError(error: unknown, context?: Record<string, unknown>) 
   }
 }
 
-export function setUser(user: { id: string; email?: string } | null) {
+export function setUser(_user: { id: string; email?: string } | null) {
   // Sentry.setUser(user);
 }

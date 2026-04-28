@@ -14,8 +14,6 @@ import { useAuth } from '@/hooks/use-auth';
 import { formatCurrency } from '@xplaza/utils';
 import {
   Trash2,
-  Minus,
-  Plus,
   ShoppingBag,
   Bookmark,
   ArrowRight,

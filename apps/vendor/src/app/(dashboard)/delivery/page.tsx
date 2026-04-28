@@ -2,7 +2,7 @@
 
 import { Card } from '@xplaza/ui';
 import { Button } from '@xplaza/ui';
-import { Truck, Plus, Clock, Calendar } from 'lucide-react';
+import { Plus, Calendar } from 'lucide-react';
 
 export default function VendorDeliveryPage() {
   return (

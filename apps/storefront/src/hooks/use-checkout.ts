@@ -10,7 +10,6 @@ import {
   setShippingMethod,
   setPaymentMethod,
   completeCheckout,
-  type CheckoutSession,
   type Address,
 } from '@/lib/checkout-api';
 

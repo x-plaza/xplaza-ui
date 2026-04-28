@@ -1,9 +1,7 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { Button } from '@xplaza/ui';
 import { ProductCarousel } from '@/components/product/product-carousel';
-import { ProductGrid } from '@/components/product/product-grid';
 import { HeroCarousel } from '@/components/layout/hero-carousel';
 import { Skeleton } from '@xplaza/ui';
 import { getProducts, getCategories, getBrands } from '@/lib/queries';

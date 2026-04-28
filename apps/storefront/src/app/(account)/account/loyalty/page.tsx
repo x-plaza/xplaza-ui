@@ -1,7 +1,6 @@
 'use client';
 
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
-import { Button } from '@xplaza/ui';
 import { Trophy, Star, ArrowUp } from 'lucide-react';
 
 export default function LoyaltyPage() {

@@ -9,7 +9,7 @@ import { Button } from '@xplaza/ui';
 import { Badge } from '@xplaza/ui';
 import { Skeleton } from '@xplaza/ui';
 import { X, SlidersHorizontal } from 'lucide-react';
-import type { Product, PaginationMeta, AggregationBucket, SearchAggregations } from '@xplaza/types';
+import type { Product, SearchAggregations } from '@xplaza/types';
 import { searchProducts } from '@/lib/queries';
 
 export default function SearchPage() {

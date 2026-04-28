@@ -3,7 +3,6 @@
 import { Card } from '@xplaza/ui';
 import { Button } from '@xplaza/ui';
 import { Input } from '@xplaza/ui';
-import { Badge } from '@xplaza/ui';
 import { Store, Search, Plus } from 'lucide-react';
 
 export default function AdminShopsPage() {

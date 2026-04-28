@@ -1,8 +1,7 @@
 'use client';
 
 import { Card } from '@xplaza/ui';
-import { Button } from '@xplaza/ui';
-import { MessageSquare, Star } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 export default function VendorReviewsPage() {
   return (

@@ -2,7 +2,7 @@
 
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { Button } from '@xplaza/ui';
-import { Shield, Download, Trash2, AlertTriangle } from 'lucide-react';
+import { Download, Trash2, AlertTriangle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function PrivacyPage() {

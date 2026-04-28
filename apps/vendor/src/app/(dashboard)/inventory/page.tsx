@@ -1,7 +1,6 @@
 'use client';
 
 import { Card } from '@xplaza/ui';
-import { Badge } from '@xplaza/ui';
 import { Warehouse, AlertTriangle } from 'lucide-react';
 
 export default function VendorInventoryPage() {

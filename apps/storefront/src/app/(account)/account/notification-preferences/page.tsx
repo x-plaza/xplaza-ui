@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { Button } from '@xplaza/ui';
-import { Bell } from 'lucide-react';
 import { cn } from '@xplaza/utils';
 
 const PREF_GROUPS = [

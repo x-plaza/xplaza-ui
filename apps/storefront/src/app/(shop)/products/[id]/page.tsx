@@ -8,11 +8,9 @@ import { PriceDisplay } from '@/components/product/price-display';
 import { StarRating } from '@/components/product/star-rating';
 import { ProductCarousel } from '@/components/product/product-carousel';
 import { AddToCart } from '@/components/product/add-to-cart';
-import { Button } from '@xplaza/ui';
 import { Skeleton } from '@xplaza/ui';
 import { Truck, RotateCcw } from 'lucide-react';
 import { getProduct, getProducts, getProductReviews, getProductReviewSummary } from '@/lib/queries';
-import { formatCurrency } from '@xplaza/utils';
 
 export const revalidate = 300;
 

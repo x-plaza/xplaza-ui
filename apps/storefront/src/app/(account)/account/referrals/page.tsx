@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { Button } from '@xplaza/ui';
 import { Input } from '@xplaza/ui';
-import { Users, Copy, Gift } from 'lucide-react';
+import { Copy, Gift } from 'lucide-react';
 
 export default function ReferralsPage() {
   const referralCode = 'XPL-REF-00000';

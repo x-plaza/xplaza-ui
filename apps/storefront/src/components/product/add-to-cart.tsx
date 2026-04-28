@@ -32,8 +32,8 @@ export function AddToCart({
   productId,
   inStock,
   variants,
-  sellingPrice,
-  currency,
+  sellingPrice: _sellingPrice,
+  currency: _currency,
 }: AddToCartProps) {
   const { addItem, isAdding } = useCart();
   const { open } = useCartStore();

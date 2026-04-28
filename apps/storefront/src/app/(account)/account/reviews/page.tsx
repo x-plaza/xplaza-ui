@@ -6,7 +6,6 @@ import { Star, MessageSquare } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { getUserReviews } from '@/lib/queries';
 import type { Review } from '@xplaza/types';
-import Link from 'next/link';
 
 export default function MyReviewsPage() {
   const { data: response, isLoading } = useQuery({

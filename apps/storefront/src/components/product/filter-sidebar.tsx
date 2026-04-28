@@ -4,12 +4,6 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, X } from 'lucide-react';
 import type { Category, Brand } from '@xplaza/types';
 
-interface FilterGroup {
-  key: string;
-  label: string;
-  type: 'categories' | 'brands' | 'price' | 'custom';
-}
-
 interface FilterSidebarProps {
   categories: Category[];
   brands: Brand[];
